@@ -91,6 +91,16 @@ const inputClosePin = document.querySelector(".form__input--pin");
 
 /////////////////////////////////////////////////
 // Functions
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// Show popup when the page loads
+window.onload = openPopup;
 
 const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
