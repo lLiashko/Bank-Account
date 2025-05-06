@@ -99,7 +99,6 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-// Show popup when the page loads
 window.onload = openPopup;
 
 const formatMovementDate = function (date, locale) {
@@ -352,6 +351,6 @@ btnClose.addEventListener("click", function (e) {
 let sorted = false;
 btnSort.addEventListener("click", function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
+  displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
